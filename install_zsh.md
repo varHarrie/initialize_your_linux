@@ -50,8 +50,11 @@ alias cls='clear'
 alias ll='ls -l'
 alias la='ls -a'
 alias vi='vim'
-alias grep="grep --color=auto"
-alias -s html=code   # 在命令行直接输入后缀为 html 的文件名，会在vscode中打开
+alias grep='grep --color=auto'
+# cnpm命令使用淘宝镜像
+alias cnpm='npm --registry=https://registry.npm.taobao.org --cache=$HOME/.npm/.cache/cnpm --disturl=https://npm.taobao.org/mirrors/node --userconfig=$HOME/.cnpmrc'
+# 在命令行直接输入文件名，会用对应后缀名的程序打开
+alias -s html=code
 alias -s js=code
 alias -s css=code
 alias -s txt=gedit

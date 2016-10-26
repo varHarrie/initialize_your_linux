@@ -13,7 +13,15 @@ $ tar -zxvf node-v6.9.1-linux-x64.tar.gz
 
 3、设置为全局命令
 
-*方法一（推荐）*：添加bin目录到PATH环境变量中
+*方法一*：创建快捷方式到/usr/local/bin
+
+```bash
+# 创建快捷方式（具体目录改为你自己的）
+$ sudo ln -s /home/harrie/Softwares/node-v6.9.1-linux-x64/bin/node /usr/local/bin/node
+$ sudo ln -s /home/harrie/Softwares/node-v6.9.1-linux-x64/bin/npm /usr/local/bin/npm
+```
+
+*方法二*：添加bin目录到PATH环境变量中
 
 ```bash
 # 打开.profile
@@ -22,13 +30,11 @@ $ sudo gedit ~/.profile
 export PATH=$PATH:/home/harrie/Softwares/node-v6.9.1-linux-x64/bin
 ```
 
-*方法二*：创建快捷方式到/usr/local/bin（具体目录改为你自己的）
+注意：如果出现npm或node命令可用，但sudo npm或sudo node不可用，还需要：
 
-```bash
-# 创建快捷方式
-$ ln -s /home/harrie/Softwares/node-v6.9.1-linux-x64/bin/node /usr/local/bin/node
-$ ln -s /home/harrie/Softwares/node-v6.9.1-linux-x64/bin/npm /usr/local/bin/npm
-```
+1. 编辑/etc/sudoers文件，把Defaults  env_reset改成Defaults ! env_reset
+
+2. 编辑.bashrc，最后添加alias sudo='sudo env PATH=$PATH'
 
 ## （二）通过源文件安装
 
