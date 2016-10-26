@@ -1,6 +1,7 @@
 # debain系linux常用命令
 
-### 安装deb包
+## 安装deb包
+
 ```bash
 # 安装*.deb
 $ sudo dpkg -i xxx.deb

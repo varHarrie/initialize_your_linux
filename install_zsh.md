@@ -11,18 +11,25 @@ $ chsh -s /bin/zsh
 ```
 
 2、通过git安装oh my zsh（[官网](http://ohmyz.sh/)）
+
 ```bash
+# 克隆仓库
 $ git clone git://github.com/robbyrussell/oh-my-zsh.git ~/.oh-my-zsh
+# 复制
 $ cp ~/.oh-my-zsh/templates/zshrc.zsh-template ~/.zshrc
 ```
 
 3、配置主题
 [官方主题列表及预览](https://github.com/robbyrussell/oh-my-zsh/wiki/themes)
+
 ```bash
+# 编辑
 $ gedit ~/.zshrc
 ```
+
 找到并修改ZSH_THEME
-```
+
+```text
 # 默认主题
 ZSH_THEME=”robbyrussell”
 # 个人推荐
@@ -30,13 +37,15 @@ ZSH_THEME=ys
 ```
 
 4、配置命令别名
+
 ```bash
+# 编辑
 $ gedit ~/.zshrc
 ```
 
 最下面加上
 
-```
+```text
 alias cls='clear'
 alias ll='ls -l'
 alias la='ls -a'
@@ -57,17 +66,21 @@ alias -s bz2='tar -xjvf'
  官方插件[列表](https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins)
 
 ```bash
+# 编辑
 $ gedit ~/.zshrc
 ```
 
 找到并编辑plugins，添加插件到括号内，空格隔开
-```
+
+```text
 plugins=(git autojump npm zsh-syntax-highlighting sudo)
 ```
 
 推荐插件（如无安装说明，添加即可使用）：
-1) git：显示当前目录git状态、分支、简化git命令，例如gco=’git checkout’、gd=’git diff’、gst=’git status’、g=’git’等等
-2) autojump：输入常用目录名可实现快速跳转，如`j soft`，可以快速跳转到`/xxx/xxx/software`
+* git：显示当前目录git状态、分支、简化git命令，例如gco=’git checkout’、gd=’git diff’、gst=’git status’、g=’git’等等
+
+* jutojump：输入常用目录名可实现快速跳转，如`j soft`，可以快速跳转到`/xxx/xxx/software`
+
 ```bash
 # 安装autojump
 # 通过git下载最新autojump
@@ -80,13 +93,18 @@ $ gedit ~/.zshrc
 # 添加以下代码到.zshrc中
 [[ -s ~/.autojump/etc/profile.d/autojump.sh ]] && . ~/.autojump/etc/profile.d/autojump.sh
 ```
-3) npm：npm命令提示
-4) fasd：功能类似autojump，据说更强大，二选一，安装说明看[官网](https://github.com/clvv/fasd)
-5) zsh-syntax-highlighting：判断命令是否正确，绿色正确，红色错误
+
+* npm：npm命令提示
+
+* fasd：功能类似autojump，据说更强大，二选一，安装说明看[官网](https://github.com/clvv/fasd)
+
+* zsh-syntax-highlighting：判断命令是否正确，绿色正确，红色错误
+
 ```bash
 # 安装zsh-syntax-highlighting
 $ git clone git://github.com/jimmijj/zsh-syntax-highlighting ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
 # 添加到~/.zshrc的plugins中
 plugins=(zsh-syntax-highlighting)
 ```
-6)sudo：按两下esc快速添加sudo到上一条命令
+
+* sudo：按两下esc快速添加sudo到上一条命令

@@ -5,5 +5,6 @@
 2、下载安装
 
 ```bash
+# 安装
 $ sudo apt-get install git
 ```
