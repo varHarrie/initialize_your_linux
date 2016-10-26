@@ -13,10 +13,10 @@ $ tar -zxvf node-v6.9.1-linux-x64.tar.gz
 
 3、设置为全局命令
 
-*方法一*：创建快捷方式到/usr/local/bin
+*方法一*：创建软链接到/usr/local/bin
 
 ```bash
-# 创建快捷方式（具体目录改为你自己的）
+# 软链接方式（具体目录改为你自己的）
 $ sudo ln -s /home/harrie/Softwares/node-v6.9.1-linux-x64/bin/node /usr/local/bin/node
 $ sudo ln -s /home/harrie/Softwares/node-v6.9.1-linux-x64/bin/npm /usr/local/bin/npm
 ```
