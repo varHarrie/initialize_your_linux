@@ -123,8 +123,8 @@ $ sudo mkdir -p /data/db
   # 端口号
   # port = 27017
 
-  # 日志路径
-  logpath = ../log/mongodb.log
+  # 日志路径（所在目录必须存在）
+  logpath = /data/log/mongodb.log
 
   # 启动日志不追加，太过庞大
   logappend = false
@@ -132,7 +132,7 @@ $ sudo mkdir -p /data/db
   # 设置每个数据库将被保存在单独的目录
   # directoryperdb = true
 
-  # 设置mongodb的db路径
+  # 设置mongodb的db路径（所在目录必须存在）
   dbpath = /data/db
 
   # 后台驻留(守护)进程服务运行
@@ -231,4 +231,16 @@ $ sudo mkdir -p /data/db
   $ sudo service mongod stop
   # 查看服务状态
   $ sudo service mongod status
+  ```
+
+  如果提示`Unit mongodb.service not found`错误，可以尝试以下方法
+  ```bash
+  # 停止进程，或通过ps -ef | grep mongod，用kill -9 xxx的方式
+  $ sudo service mongod stop
+  # 删除mongodb.lock（一般在/data/db下）
+  $ sudo rm -rf /data/db/mongodb.lock
+  # 删除日志文件
+  $ sudo rm -rf /data/log/*
+  # 重新启动，或先尝试通过mongod -f xxx.conf命令启动，进行验证
+  $ sudo service mongod start
   ```
