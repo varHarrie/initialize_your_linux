@@ -1,6 +1,6 @@
 # 目录
 
-- [debain系linux常用命令](./common_commands.md)
+- [linux常见问题](./faq.md)
 - [装机后首先做的事（挂载磁盘、修改hosts）](./the_first_thing.md)
 - [安装git](./install_git.md)
 - [安装zsh和oh my zsh](./install_zsh.md)
