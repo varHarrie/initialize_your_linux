@@ -1,5 +1,6 @@
 # 目录
 
+- [安装linxu须知](./notice.md)
 - [linux常见问题](./faq.md)
 - [装机后首先做的事（挂载磁盘、修改hosts）](./the_first_thing.md)
 - [安装git](./install_git.md)
