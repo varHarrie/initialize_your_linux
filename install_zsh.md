@@ -1,4 +1,7 @@
 # 安装zsh和oh my zsh
+
+什么是zsh？百度或参考[这篇知乎](https://www.zhihu.com/question/21418449)。
+
 1、安装zsh
 
 ```bash
