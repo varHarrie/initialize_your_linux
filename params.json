@@ -1,0 +1,6 @@
+{
+  "name": "Initialize your linux",
+  "tagline": "Linux入坑须知。",
+  "body": "# 目录\r\n\r\n- [安装linxu须知](./notice.md)\r\n- [linux常见问题](./faq.md)\r\n- [装机后首先做的事（挂载磁盘、修改hosts）](./the_first_thing.md)\r\n- [安装git](./install_git.md)\r\n- [安装zsh和oh my zsh](./install_zsh.md)\r\n- [安装node和npm](./install_node.md)\r\n- [安装vscode](./install_vscode.md)\r\n- [安装atom](./install_atom.md)\r\n- [安装sublime text](./install_sublimetext.md)\r\n- [安装mongodb](./install_mongodb.md)\r\n- [安装git图形化工具](./install_git_gui.md)\r\n",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
