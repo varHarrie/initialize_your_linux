@@ -96,3 +96,28 @@ $ cp /usr/local/bin/node /usr/sbin
 $ sudo apt-get install nodejs
 $ sudo apt-get install npm
 ```
+
+## 常见问题
+
+1. `sudo npm xxx`或`sudo node`提示找不到命令
+
+造成这个问题的根本原因是，`sudo`命令执行的目录是`/etc/sudoers`中定义的`secure_path`，要么将命令软连接到这些目录，要么修改目录路径。
+
+解决方案一：创建软连接
+
+```bash
+$ sudo ln -s /usr/local/bin/node /usr/bin/node
+$ sudo ln -s /usr/local/bin/npm /usr/bin/npm
+```
+解决方案二：修改sudo目录
+
+编辑/etc/sudoers文件，把`Defaults  env_reset`改成`Defaults ! env_reset`
+
+编辑`~/.bashrc`或`~/.zshrc`，最后添加`alias sudo='sudo env PATH=$PATH'`
+
+执行
+```bash
+$ source ~/.bashrc
+# 或
+$ source ~/.zshrc
+```
