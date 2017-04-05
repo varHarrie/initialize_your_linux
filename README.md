@@ -11,3 +11,4 @@
 - [安装sublime text](./install_sublimetext.md)
 - [安装mongodb](./install_mongodb.md)
 - [安装git图形化工具](./install_git_gui.md)
+- [密码管理工具](./password_manager.md)
