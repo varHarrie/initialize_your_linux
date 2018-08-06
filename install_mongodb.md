@@ -16,6 +16,11 @@
 $ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 0C49F3730359A14518585931BC711F9BA15703C6
 ```
 
+若提示`gpg: keyserver receive failed: No dirmngr`，请先安装`dirmngr`：
+```bash
+$ sudo apt-get install -y dirmngr
+```
+
 2、创建sources.list.d
 
 ```bash
